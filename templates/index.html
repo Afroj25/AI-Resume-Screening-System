@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Screening System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Resume Screening System</h1>
+        <p class="subtitle">
+            Paste a resume below and predict the most suitable job category.
+        </p>
+
+        <form action="/predict" method="POST">
+            <textarea
+                name="resume"
+                placeholder="Paste resume text here..."
+                required
+            ></textarea>
+
+            <button type="submit">Predict Category</button>
+        </form>
+    </div>
+</body>
+</html>
